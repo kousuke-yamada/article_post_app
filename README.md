@@ -24,3 +24,4 @@ Things you may want to cover:
 * ...
 
 // mainブランチのプロテクト確認
+// githubのテスト
