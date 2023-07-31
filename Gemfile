@@ -30,7 +30,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 
 # bootstrap5の適用
-gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'bootstrap', '~> 5.1.0'
 gem 'jquery-rails'
 
 gem 'devise'
