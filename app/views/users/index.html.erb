@@ -1,10 +1,11 @@
-<h1>Dash Boards</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1><%= t(".title") %></h1>
 
 <% if user_signed_in? %>
-  <%= link_to "Edit User", edit_user_registration_path %>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+  <h2><%= current_user.name %></h2>
+
+  <%= link_to t(".edit_user"), edit_user_registration_path, class: "btn btn-primary" %>
+  <%= link_to t(".log_out"), destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
 <% else %>
-  <%= link_to "Log in",  new_user_session_path %>
-  <%= link_to "Sing up", new_user_registration_path %>
+  <%= link_to t(".log_in"),  new_user_session_path, class: "btn btn-primary" %>
+  <%= link_to t(".sign_up"), new_user_registration_path, class: "btn btn-primary" %>
 <% end %>
