@@ -1,1 +1,23 @@
  @import "bootstrap";
+
+ h2 {
+  text-align: center;
+  font-weight: bold;
+ }
+ h3 {
+  text-align: center;
+  font-weight: bold;
+ }
+
+ .btn-users-submit {
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+
+ .btn-users-dashboard {
+  width: 30%;
+ }
+
+ .actions {
+  text-align: center;
+ }

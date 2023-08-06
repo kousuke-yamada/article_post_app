@@ -1,11 +1,15 @@
-<h1><%= t(".title") %></h1>
+<h2><%= t(".title") %></h2>
 
 <% if user_signed_in? %>
-  <h2><%= current_user.name %></h2>
+  <h3><%= current_user.name %></h3>
 
-  <%= link_to t(".edit_user"), edit_user_registration_path, class: "btn btn-primary" %>
-  <%= link_to t(".log_out"), destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
+  <div class="actions">
+    <%= link_to t(".edit_user"), edit_user_registration_path, class: "btn btn-primary btn-users-dashboard" %><br/>
+    <%= link_to t(".log_out"), destroy_user_session_path, method: :delete, class: "btn btn-warning btn-users-dashboard" %>
+  </div>  
 <% else %>
-  <%= link_to t(".log_in"),  new_user_session_path, class: "btn btn-primary" %>
-  <%= link_to t(".sign_up"), new_user_registration_path, class: "btn btn-primary" %>
+  <div class="actions">
+    <%= link_to t(".log_in"),  new_user_session_path, class: "btn btn-primary btn-users-dashboard" %><br/>
+    <%= link_to t(".sign_up"), new_user_registration_path, class: "btn btn-primary btn-users-dashboard" %>
+  </div>
 <% end %>

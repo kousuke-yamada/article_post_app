@@ -35,12 +35,12 @@ ja:
         resend_confirmation_instructions: "アカウント確認メール再送"
     mailer:
       confirmation_instructions:
-        action: "アカウント確認"
-        greeting: "ようこそ、%{recipient}さん!"
+        action: "メールアドレスの確認"
+        greeting: "%{recipient}様"
         instruction: "以下のリンクをクリックし、メールアドレスの確認手続きを完了させて下さい。"
       reset_password_instructions:
         action: "パスワード変更"
-        greeting: "こんにちは、%{recipient}さん!"
+        greeting: "%{recipient}様"
         instruction: "パスワード再設定の依頼を受けたため、メールを送信しています。以下のリンクからパスワードの再設定ができます。"
         instruction_2: "パスワード再設定の依頼をしていない場合、このメールを無視して下さい。"
         instruction_3: "パスワードの再設定は、上のリンクから新しいパスワードを登録するまで完了しません。"
@@ -70,6 +70,7 @@ ja:
         update: "更新"
         we_need_your_current_password_to_confirm_your_changes: "(変更を反映するには現在のパスワードを入力してください)"
         minimum_password: "(%{length}文字以上)"
+        back: "戻る"
       new:
         sign_up: "アカウント登録"
         minimum_password: "(%{length}文字以上)"
