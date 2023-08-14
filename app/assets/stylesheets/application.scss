@@ -9,15 +9,31 @@
   font-weight: bold;
  }
 
+ th,td {
+  text-align: center;
+ }
+
  .btn-users-submit {
   margin-top: 20px;
   margin-bottom: 20px;
  }
 
  .btn-users-dashboard {
+  margin-top: 5px;
+  margin-bottom: 5px;
   width: 30%;
  }
 
  .actions {
   text-align: center;
+ }
+
+ .btn-article-submit {
+  margin-top: 20px;
+ }
+
+ .btn-article-new {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 50%;
  }

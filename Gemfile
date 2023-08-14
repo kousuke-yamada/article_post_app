@@ -39,6 +39,9 @@ gem 'devise'
 gem 'rails-i18n'
 gem 'devise-i18n'
 
+gem "mini_magick"
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

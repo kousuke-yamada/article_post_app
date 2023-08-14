@@ -1,0 +1,36 @@
+<h2>記事詳細</h2>
+
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>タイトル</th>
+        <th>内容</th>
+        <th>画像</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- タイトル -->
+        <td><%= @article.title %></td>
+        <!-- 内容 -->
+        <td><%= @article.content %></td>
+        <!-- 画像 -->
+        <td><%= image_tag @article.image.url(:thumb) if @article.image.present? %></td>
+      </tr>
+    </tbody>
+  </table> 
+  
+  <!-- 編集ボタン・削除ボタン -->
+  <div class="actions">
+    <%= link_to "修正", edit_users_article_path(@article), class: "btn btn-success" %>
+    <%= link_to "削除", users_article_path(@article), method: :delete,
+          data: {confirm: "削除してよろしいですか？"},
+          class: "btn btn-danger" %>
+  </div>
+  <div class="actions">
+    <%= link_to "記事一覧に戻る", users_articles_path, class: "btn btn-primary btn-article-submit" %>
+  </div>
+
+
+</div>

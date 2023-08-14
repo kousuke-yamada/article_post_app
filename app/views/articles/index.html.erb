@@ -1,0 +1,40 @@
+<h2>記事一覧</h2>
+
+<div class="actions">
+  <%= link_to "記事新規作成", new_users_article_path, class: "btn btn-primary btn-article-new" %>
+</div>
+
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>詳細表示</th>
+        <th>タイトル</th>
+        <th>内容</th>
+        <th>画像</th>
+        <th>編集・削除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <!-- 詳細ボタン -->
+          <td><%= link_to "詳細", users_article_path(article), class: "btn btn-primary" %></td>
+          <!-- タイトル -->
+          <td><%= article.title %></td>
+          <!-- 内容 -->
+          <td><%= article.content %></td>
+          <!-- 画像 -->
+          <td><%= image_tag article.image.url(:thumb) if article.image.present? %></td>
+          <!-- 編集ボタン・削除ボタン -->
+          <td><%= link_to "修正", edit_users_article_path(article), class: "btn btn-success" %>
+              <%= link_to "削除", users_article_path(article), method: :delete,
+                    data: {confirm: "削除してよろしいですか？"},
+                    class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table> 
+
+</div>

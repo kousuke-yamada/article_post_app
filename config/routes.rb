@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   
   get 'users/dash_boards', to: 'users#index' 
 
+  resource :users do
+      resources :articles
+  end
+
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end
