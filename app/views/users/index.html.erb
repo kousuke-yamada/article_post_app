@@ -4,6 +4,7 @@
   <h3><%= current_user.name %></h3>
 
   <div class="actions">
+    <%= link_to "記事一覧", users_articles_path, class: "btn btn-primary btn-users-dashboard" %><br/>
     <%= link_to t(".edit_user"), edit_user_registration_path, class: "btn btn-primary btn-users-dashboard" %><br/>
     <%= link_to t(".log_out"), destroy_user_session_path, method: :delete, class: "btn btn-warning btn-users-dashboard" %>
   </div>  

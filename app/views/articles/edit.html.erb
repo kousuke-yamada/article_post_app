@@ -1,0 +1,8 @@
+<% provide(:button_text, '更新する') %>
+<h2>記事の編集</h2>
+
+<div class="row">
+  <div class="w-50 mx-auto">
+    <%= render 'form', article: @article, article_path: users_article_path(@article) %>
+  </div>
+</div>

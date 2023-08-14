@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      article:  '記事'
+    attributes:
+      article:
+        title:  'タイトル'
+        content:  '内容'
+        image:   '画像'        
+  errors:
+    messages:
+      extension_whitelist_error: "ファイル形式 %{extension}は、アップロード出来ません。ファイル拡張子[ jpg, jpeg, gif, png ]の画像を選択して下さい。"
+  
